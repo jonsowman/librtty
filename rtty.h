@@ -26,6 +26,7 @@ class RTTY {
     RTTY(int pin, int baud, float stopbits, checksum_type ctype);
     void transmit(char *str);
     void setBaud(int baud);
+    void setStopbits(float stopbits);
     int getBaud();
     void setChecksum(checksum_type ctype);
     checksum_type getChecksum();

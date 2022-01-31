@@ -130,6 +130,11 @@ void RTTY::setChecksum(checksum_type ctype) {
     _ctype = ctype;
 }
 
+void RTTY::setStopbits(float stopbits) {
+    // Change the stopbits amount
+    _stopbits = (float)(stopbits);
+}
+
 checksum_type RTTY::getChecksum() {
     // Return the current checksum setting
     return _ctype;

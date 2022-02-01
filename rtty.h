@@ -27,14 +27,15 @@ class RTTY {
     void transmit(char *str);
     void setBaud(int baud);
     void setStopbits(float stopbits);
+    void setPin(int pin);
     int getBaud();
     void setChecksum(checksum_type ctype);
     checksum_type getChecksum();
   private:
     void _writeByte(char data);
     unsigned int _crc16(char *string);
-    const int _pin;
-    const float _stopbits;
+    int _pin;
+    float _stopbits;
     int _timestep;
     checksum_type _ctype;
 };

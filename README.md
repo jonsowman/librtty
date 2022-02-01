@@ -17,7 +17,13 @@ Transmit a string:
 `transmit(string);`  
 
 Set the transmission baud rate:  
-`setBaud(50);`  
+`setBaud(50);`
+
+Change the transmitting pin:  
+`setPin(5);`
+
+Set the stopbits:  
+`setStopbits(1.5);`  
 
 Get the current baud rate setting:  
 `getBaud();`  
@@ -31,4 +37,6 @@ Get the current checksum setting:
 ## Credits
 
 Written by Jon Sowman in 2010 and released into the public domain under the
-Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.
+
+Modified in 2022 to work with Arduino 1.0+ and added functions.

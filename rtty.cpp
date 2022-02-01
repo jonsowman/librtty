@@ -135,6 +135,11 @@ void RTTY::setStopbits(float stopbits) {
     _stopbits = (float)(stopbits);
 }
 
+void RTTY::setPin(int pin) {
+    // Change the transmission pin
+    _pin = (int)(pin);
+}
+
 checksum_type RTTY::getChecksum() {
     // Return the current checksum setting
     return _ctype;

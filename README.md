@@ -3,6 +3,7 @@
 ## Information
 
 This is librtty [/ˈlɪbərti/], an open source Arduino library for generating an RTTY bitstream to be fed into an FM transmitter. Uses a potential divider on the Arduino output pin, providing the correct voltages to set the frequency shift.  
+This fork is modified for the [Peregrinus project](https://github.com/oppocomputer/peregrinus) by the SHD 
 
 ## Usage
 

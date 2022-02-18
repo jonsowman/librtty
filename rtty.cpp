@@ -10,7 +10,13 @@
    http://www.cuspaceflight.co.uk
 */
 
+
+#if defined(ARDUINO) && ARDUINO >= 100
+#include "Arduino.h"
+#else
 #include "WProgram.h"
+#endif
+
 #include "util/crc16.h"
 #include "types.h"
 #include "rtty.h"
@@ -122,6 +128,16 @@ int RTTY::getBaud() {
 void RTTY::setChecksum(checksum_type ctype) {
     // Change the checksum type appended to the transmit string
     _ctype = ctype;
+}
+
+void RTTY::setStopbits(float stopbits) {
+    // Change the stopbits amount
+    _stopbits = (float)(stopbits);
+}
+
+void RTTY::setPin(int pin) {
+    // Change the transmission pin
+    _pin = (int)(pin);
 }
 
 checksum_type RTTY::getChecksum() {

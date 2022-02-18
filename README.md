@@ -3,6 +3,7 @@
 ## Information
 
 This is librtty [/ˈlɪbərti/], an open source Arduino library for generating an RTTY bitstream to be fed into an FM transmitter. Uses a potential divider on the Arduino output pin, providing the correct voltages to set the frequency shift.  
+This fork is modified for the [Peregrinus project](https://github.com/oppocomputer/peregrinus) by the SHD 
 
 ## Usage
 
@@ -17,7 +18,13 @@ Transmit a string:
 `transmit(string);`  
 
 Set the transmission baud rate:  
-`setBaud(50);`  
+`setBaud(50);`
+
+Change the transmitting pin:  
+`setPin(5);`
+
+Set the stopbits:  
+`setStopbits(1.5);`  
 
 Get the current baud rate setting:  
 `getBaud();`  
@@ -31,4 +38,6 @@ Get the current checksum setting:
 ## Credits
 
 Written by Jon Sowman in 2010 and released into the public domain under the
-Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.
+
+Modified in 2022 to work with Arduino 1.0+ and added functions.
